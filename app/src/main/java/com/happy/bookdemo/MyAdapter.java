@@ -67,9 +67,9 @@ public class MyAdapter extends RecyclerView.Adapter implements ItemSlideHelper.C
             @Override
             public void onClick(View v) {
                 Log.i("kkkk","删除按钮有效==========="+position);
-                mDatas.remove(position);
+                mDatas.remove(getLayoutPosition);
                 // 刷新ListView内容
-                notifyItemChanged(position);
+                notifyItemRemoved(getLayoutPosition);
             }
 
         });
